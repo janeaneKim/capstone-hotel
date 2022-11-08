@@ -25,20 +25,6 @@ function App() {
           <Route component= {Error}/>
       </Switch>
   </>
-
-    // <>
-    //   <Router>
-    //     <Navbar/>
-    //     <Routes>
-    //         <Route exact path="/" element={<Home />} />
-    //         <Route exact path="/rooms" element ={<Rooms/>} />
-    //         <Route exact path="/rooms/:slug" element ={<SingleRoom/>} />
-    //         <Route exact path="/book" element={<Dates/>}/>
-    //         <Route exact path="/success" element={<Success/>}/>
-    //         <Route path="*" element= {<Error/>}/>
-    //     </Routes>
-    //   </Router>
-    // </>
   );
 }
 

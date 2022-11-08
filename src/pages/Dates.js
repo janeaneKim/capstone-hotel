@@ -24,9 +24,8 @@ const Dates = () => {
     await addDoc(collectionRef, {startDate: newStartDate, leaveDate:newLeaveDate, roomType:newRoomType})
   }
 
-  const handleSubmit = event => {
-    event.preventDefault();
-    history.pushState("/")
+  function handleSubmit(){
+    history.push("/success")
   }
 
   return ( 
@@ -51,11 +50,19 @@ const Dates = () => {
             <div className="txt">Room Selection:</div>
             <div className="inputData">
               <select name="room-type" id="room-type" onChange={(event => {setNewRoomType(event.target.value)})}>
-                <option value="Room 1">Room 1</option>
-                <option value="Room 2">Room 2</option>
-                <option value="Room 3">Room 3</option>
-                <option value="Room 4">Room 4</option>
-                <option value="Room 5">Room 5</option>
+                <option value="single-economy">Single Economy</option>
+                <option value="single-basic">Single Basic</option>
+                <option value="single-standard">Single Standard</option>
+                <option value="single-deluxe">Single Deluxe</option>
+                <option value="double-economy">Double Economy</option>
+                <option value="double-basic">Double Basic</option>
+                <option value="double-standard">Double Standard</option>
+                <option value="double-deluxe">Double Deluxe</option>
+                <option value="family-economy">Family Economy</option>
+                <option value="family-basic">Family Basic</option>
+                <option value="family-standard">Family Standard</option>
+                <option value="family-deluxe">Family Deluxe</option>
+                <option value="presidential">Presidential</option>
               </select>
             </div>
             <div>
