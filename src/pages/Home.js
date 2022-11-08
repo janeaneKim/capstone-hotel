@@ -1,9 +1,8 @@
 import React from "react";
 import Jumbotron from '../components/Jumbotron';
-import Banner from "../components/Banner";
-import {Link} from 'react-router-dom';
 import paradise from "../images/paradise-font.png"
-import Services from "../components/Services";
+import FeaturedRooms from "../components/FeaturedRooms";
+import Amenities from "../components/Amenities";
 
 
 const Home = () => {
@@ -14,7 +13,8 @@ const Home = () => {
                 <Link to="/rooms" className="btn-primary">Our Rooms</Link> */}
                 <img className="paradise-font" src={paradise} alt="paradise-font"></img>
             </Jumbotron>
-             <Services />
+            <Amenities />
+            <FeaturedRooms/>
         </>
     )
 }

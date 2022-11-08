@@ -120,7 +120,9 @@ h6 {
   overflow: hidden;
   transition: var(--mainTransition);
   list-style-type: none;
+  margin-top: 30px;
 }
+
 .nav-links a {
   display: block;
   text-decoration: none;
@@ -130,8 +132,8 @@ h6 {
   font-size: 15px;
   font-weight: lighter;
   letter-spacing: var(--mainSpacing);
-  padding-top: 30px;
 }
+
 .nav-links a:hover {
   color: var(--accentColor);
 }
@@ -142,6 +144,10 @@ h6 {
   z-index: 0;
   position: sticky;
   padding-right: 250px;
+}
+
+.nav-book{
+  margin-top: 20px;
 }
 
 @media screen and (min-width: 768px) {
@@ -161,14 +167,21 @@ h6 {
     right: 30px;
   }
   .nav-links a{
-    padding-left: 100px;
+    margin-left: 100px;
     letter-spacing: var(--mainSpacing);
+  }
+  .nav-book{
+    margin-top: -5px;
   }
 }
 /* end of navbar */
 /* Jumbotron */
 .defaultJumbotron,
-.roomsJumbotron {
+.roomsJumbotron, 
+.formJumbotron,
+.successJumbotron {
+  margin-top: 20px;
+  margin-top: 20px;
   min-height: calc(100vh - 66px);
   background: url("./images/hotel-landing.jpg") center/cover no-repeat;
   display: flex;
@@ -178,6 +191,14 @@ h6 {
 .roomsJumbotron {
   background-image: url("./images/room-2.jpg");
   min-height: 60vh;
+}
+.formJumbotron{
+  background-image: url("./images/sunset.jpg");
+  min-height: 70vh;
+}
+.successJumbotron{
+  background-image: url("./images/success-img.jpg");
+  min-height: 100vh;
 }
 /* End of Jumbotron */
 /* Banner */
@@ -222,7 +243,7 @@ h6 {
 /* End of Banner */
 /* Title */
 .section-title {
-  margin-top: 7rem;
+  margin-top: 5rem;
   text-align: center;
   margin-bottom: 4rem;
 }
@@ -237,7 +258,7 @@ h6 {
   width: 30rem;
   height: 3px;
   margin: 0 auto;
-  background: var(--mainGrey);
+  background: var(--primaryColor);
 }
 /* end of Title */
 
@@ -259,15 +280,18 @@ h6 {
 }
 .service span {
   display: inline-block;
-  color: var(--primaryColor);
+  color: var(--accentColor3);
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
 }
 .services h6 {
   letter-spacing: var(--mainSpacing);
+  color: var(--primaryColor);
+  text-transform: capitalize;
 }
 .services p {
   width: 80%;
+  color: var(--primaryColor);
   margin: 0 auto;
 }
 @media screen and (min-width: 992px) {
@@ -287,6 +311,7 @@ h6 {
 
 .featured-rooms {
   padding: 5rem 0;
+  background-color: var(--mainGrey);
 }
 .featured-rooms-center {
   width: 80vw;
@@ -330,8 +355,8 @@ h6 {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.8);
-  color: var(--mainWhite);
+  background: var(--accentColor3);
+  color: var(--accentColor2);
   padding: 0.3rem 0.6rem 0.5rem;
   border-bottom-right-radius: 1rem;
   font-size: 0.5rem;
@@ -365,6 +390,7 @@ h6 {
 }
 .room-info {
   background: var(--accentColor2);
+  color: var(--accentColor3);
   text-transform: capitalize;
   padding: 0.5rem 0;
   text-align: center;
@@ -523,4 +549,40 @@ h6 {
     max-width: 1170px;
   }
 }
-/* end of rooms fitler*/
+/* end of rooms filter*/
+/* booking form */
+.form2{
+  margin: auto;
+  padding: 50px;
+  padding-top: 20px;
+  background-color: var(--offWhite);
+  border-radius: 10px;
+  max-width: 400px;
+  color: var(--accentColor3);
+}
+.txt{
+  margin-top: 30px;
+  color: var(--primaryColor);
+}
+input[type="date"] {
+  border-color: var(--accentColor3);
+  height: 50px;
+  width: 250px;
+  border-radius: 10px;
+}
+input[type="date"]:hover {
+  background-color: var(--mainGrey);
+  color:#ffffff
+}
+select {
+  height: 30px;
+  width: 150px;
+}
+button.book{
+  margin-top: 30px;
+  font-family: 'Source Serif 4', serif;
+  color: var(--primaryColor);
+  height: 50px;
+  width: 250px;
+}
+
